@@ -126,7 +126,7 @@ class SupportAssistantApp:
         """STT: аудиофайл → текст."""
         return self.client.transcribe(audio_path, self.settings.stt_model)
 
-    def speak(self, text: str, output_path: str = "response.mp3") -> str:
+    def speak(self, text: str, output_path: str = "../response.mp3") -> str:
         """TTS: текст → аудиофайл."""
         return self.client.speak(
             text, self.settings.tts_model, self.settings.tts_voice, output_path,
