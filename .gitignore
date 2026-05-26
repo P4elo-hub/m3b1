@@ -1,0 +1,30 @@
+# Secrets and local config
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+assistant.log
+
+# Generated media/artifacts
+*.mp3
+generated.png
+response.mp3
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Test/cache artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

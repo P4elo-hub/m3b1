@@ -1,0 +1,42 @@
+[
+  {
+    "role": "user",
+    "content": "У нас прод-кластер K8s перестал принимать входящий трафик после обновления ingress-nginx до версии 1.9.0. Все поды в статусе CrashLoopBackOff. Ошибка: 'too many open files'"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"category\": \"kubernetes\", \"priority\": \"critical\", \"summary\": \"Отказ ingress-контроллера после обновления, поды в CrashLoopBackOff\", \"entities\": {\"services\": [\"kubernetes\", \"ingress-nginx\"], \"error_codes\": [\"CrashLoopBackOff\", \"too many open files\"], \"environment\": \"production\"}, \"requires_immediate_escalation\": false, \"confidence\": 0.95}"
+  },
+  {
+    "role": "user",
+    "content": "Не могу зайти в консоль управления, пишет 'Invalid credentials', хотя вчера все работало. Сброс пароля не помогает, письмо для сброса не приходит."
+  },
+  {
+    "role": "assistant",
+    "content": "{\"category\": \"account\", \"priority\": \"high\", \"summary\": \"Проблема с аутентификацией, сброс пароля не работает\", \"entities\": {\"services\": [\"console\", \"auth-service\", \"email-service\"], \"error_codes\": [\"Invalid credentials\"], \"environment\": \"production\"}, \"requires_immediate_escalation\": false, \"confidence\": 0.92}"
+  },
+  {
+    "role": "user",
+    "content": "Планируем миграцию с AWS RDS на ваше решение. Интересует совместимость с PostgreSQL 15, поддержка TimescaleDB и стоимость для объема 500GB."
+  },
+  {
+    "role": "assistant",
+    "content": "{\"category\": \"database\", \"priority\": \"low\", \"summary\": \"Консультация по миграции БД и совместимости\", \"entities\": {\"services\": [\"managed-postgresql\", \"timescaledb\"], \"error_codes\": [], \"environment\": \"unknown\"}, \"requires_immediate_escalation\": false, \"confidence\": 0.88}"
+  },
+  {
+    "role": "user",
+    "content": "Кто-то получил доступ к нашему S3 бакету и удалил все объекты. В логах вижу странные API-ключи, которые мы не создавали. Это срочно!"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"category\": \"security\", \"priority\": \"critical\", \"summary\": \"Неавторизованный доступ и удаление данных из S3\", \"entities\": {\"services\": [\"s3-storage\", \"iam\"], \"error_codes\": [], \"environment\": \"production\"}, \"requires_immediate_escalation\": false, \"confidence\": 0.96}"
+  },
+  {
+    "role": "user",
+    "content": "Какой у вас лучший рецепт пасты карбонара? И заодно скажите, когда будет скидка на тарифы."
+  },
+  {
+    "role": "assistant",
+    "content": "{\"category\": \"off-topic\", \"priority\": \"low\", \"summary\": \"Обращение не по теме техподдержки\", \"entities\": {\"services\": [], \"error_codes\": [], \"environment\": \"unknown\"}, \"requires_immediate_escalation\": false, \"confidence\": 0.98}"
+  }
+]
