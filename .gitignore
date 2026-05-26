@@ -10,14 +10,8 @@ __pycache__/
 venv/
 env/
 
-# Logs
-*.log
-assistant.log
-
 # Generated media/artifacts
-*.mp3
 generated.png
-response.mp3
 
 # OS/editor files
 .DS_Store
